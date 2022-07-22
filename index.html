@@ -1,19 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of chosen challenge</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name of chosen challenge</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-    <h2>make some magic here!!</h2>
 
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
-    <script src="index.mjs" type="module"></script>
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
+<body>
+  <!--     <h1>This is Circle 278's Hackaton Project</h1>
+    <h2>make some magic here!!</h2> -->
+  <header>
+    <div class="logo">
+      <h1>Cloud-278-Phonie</h1>
+    </div>
+    <div class="welcome">
+      <h3>Welcome to our Hackathon</h3>
+    </div>
+  </header>
+  <div class="container">
+    <form id="carrierDisplay" class="phonie" action="" method="get">
+      <div class="input-field">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+      </div>
+      <div class="input-field">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" required>
+      </div>
+      <div class="phone-field">
+        <div class="input-field phone-one">
+          <label for="phone">Phone:</label>
+          <input type="tel" name="phone" id="phone" required>
+        </div>
+        <div class="phone-two">
+          <img alt="" id="carrier">
+        </div>
+      </div>
+      <div class="input-field">
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address" required>
+      </div>
+      <button type="button" id="submit" class="sub">submit</button>
+    </form>
+  </div>
+
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+  <script src="index.mjs" type="module"></script>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>
+
 </html>

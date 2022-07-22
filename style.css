@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+:root{
+    --background-color: #Eff4f7; 
+    --button-color: #39a2db;
+    --text-color: #073944;
+    --form-background: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+header {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+}
+.logo {
+    flex-basis: 70%;
+    margin-right: 8px;
+}
+.welcome {
+    flex-basis: 30%;
+}
+.container {
+    max-width: 1024px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phonie {
+    background-color: var(--form-background);
+    width: 50%;
+    padding: 30px;
+    border: none;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.329);
+}
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 0 10px;
+    border-bottom: 1px dashed var(--text-color);
+}
+input:focus{
+    outline: none;
+}
+.phone-field {
+    display: flex;
+}
+.phone-one {
+    flex-basis: 80%;
+    margin-right: 10px;
+    align-self: center;
+}
+.phone-two {
+    align-self: center;
+
+}
+#carrier {
+    display: block;
+    width: 50px;
+}
+.sub {
+    width: 100%;
+    height: 40px;
+    background-color: var(--button-color);
+    color: var(--form-background);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+.sub:hover {
+    background-color: #0e5074;
+}
+
+@media only screen and (max-width: 800px) {
+    .phonie {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .logo h1 {
+        font-size: 25px;
+    }
+    .welcome h3 {
+        font-size: 15px;
+    }
+    .phonie {
+        width: 100%;
+    }
+}
