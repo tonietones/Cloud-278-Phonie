@@ -5,6 +5,7 @@ const airtel = ['0701', '0708', '0802', '0808', '0812', '0902','0901', '0704', '
 
 const phone = document.getElementById('phone');
 const username = document.getElementById('Username');
+const button = document.getElementById('btn');
 const form = document.getElementById('form');
 
 
@@ -14,10 +15,13 @@ function startApp() {
   // so create and use/call additional functions from here
 
   // pls remove the below and make some magic in here!
- form.addEventListener("submit", e => {
-    console.log('submitted');
-    e.preventDefault();
-    validateInput();
+button.addEventListener('click', () => {
+    form.reset();
+    document.getElementById('carrier').style.display = "none";
+
+})
+phone.addEventListener("input", (event) => {
+    validateInput()
 })
 };
 
