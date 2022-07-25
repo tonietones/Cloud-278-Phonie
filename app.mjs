@@ -73,7 +73,7 @@ const validateInput = () => {
         setError(phone, 'Phone Number is required!!!')
         document.getElementById('carrier').style.display = "none"
     }else if (phoneValue.length < 11) {
-        setError(phone, 'Phone number not complete!!!')
+        setError(phone, 'Phone number not valid!!!')
         document.getElementById('carrier').style.display = "none"
     }
     else if (!checkPrefix(phoneValue)) {
