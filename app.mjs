@@ -65,16 +65,23 @@ const checkPrefix = phone => {
 }
 
 const validateInput = () => {
-    const phoneValue = phone.value
+    const phoneValue = phone.value.trim()
     console.log(phone.value);
     const usernameValue = username.value.trim();
 
-
-    if (!checkPrefix(phoneValue)) {
+    if (phoneValue === ''){
+        setError(phone, 'Phone Number is required!!!')
+        document.getElementById('carrier').style.display = "none"
+    }else if (phoneValue.length < 11) {
+        setError(phone, 'Phone number not complete!!!')
+        document.getElementById('carrier').style.display = "none"
+    }
+    else if (!checkPrefix(phoneValue)) {
         setError(phone, 'Phone number not valid!!!')
     } else {
         setSuccess(phone);
     }
+
         }
 // ======= DO NOT EDIT ============== //
 export default startApp;
