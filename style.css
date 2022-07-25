@@ -39,18 +39,24 @@ header {
     justify-content: center;
     align-items: center;
 }
-.phonie {
+#form {
     background-color: var(--form-background);
     width: 50%;
     padding: 30px;
     border: none;
-   border-radius: 10px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
 }
 .input-field {
     display: flex;
     flex-direction: column;
     margin: 20px 0;
+}
+.input-field.success input{
+    border: 1px dashed green;
+}
+.input-field.error input {
+    border: 1px dashed red;
 }
 input {
     width: 100%;
@@ -61,6 +67,12 @@ input {
 }
 input:focus{
     outline: none;
+}
+.input-field .error {
+    color: #ff3860;
+    font-size: 9px;
+    font-weight: 500;
+    height: 13px;
 }
 .phone-field {
     display: flex;
@@ -78,7 +90,7 @@ input:focus{
     display: block;
     width: 50px;
 }
-.sub {
+button {
     width: 100%;
     height: 40px;
     background-color: var(--button-color);
@@ -89,7 +101,7 @@ input:focus{
     cursor: pointer;
     transition: 0.2s ease-in;
 }
-.sub:hover {
+button:hover {
     background-color: #0e5074;
 }
 
