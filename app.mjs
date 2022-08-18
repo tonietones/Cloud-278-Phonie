@@ -1,7 +1,7 @@
-const mtn = ['0803', '0806', '0703', '0706', '0813', '0816', '0810', '0814', '0903', '0906']
-const etisalat = ['0909', '0809', '0818', '0817', '0908']
-const glo = ['0805', '0807', '0705', '0815', '0811', '0905']
-const airtel = ['0701', '0708', '0802', '0808', '0812', '0902','0901', '0704', '0904']
+const mtn = ['803', '806', '703', '706', '813', '816', '810', '814', '903', '906']
+const etisalat = ['909', '809', '818', '817', '908']
+const glo = ['805', '807', '705', '815', '811', '905']
+const airtel = ['701', '708', '802', '808', '812', '902','901', '704', '904']
 
 const phone = document.getElementById('phone');
 const username = document.getElementById('Username');
@@ -43,9 +43,14 @@ const setSuccess = element => {
     inputControl.classList.remove('error');}
 
 const checkPrefix = phone => {
+    var prefix = "" 
+    if (phone.startsWith("+234")) {
+        prefix = String(phone).slice(4, 7)
+    } else if (phone.startsWith("0")){
+        prefix = String(phone).slice(1,4)
+    }
 
-    var prefix = String(phone).slice(0, 4)
-    
+    console.log(phone.length);
     console.log({prefix, phone});
 
     var imageSrc = ""
@@ -76,17 +81,17 @@ const validateInput = () => {
     if (phoneValue === ''){
         setError(phone, 'Phone Number is required!!!')
         document.getElementById('carrier').style.display = "none"
-    }else if (phoneValue.length < 11) {
-        setError(phone, 'Phone number not valid!!!')
-        document.getElementById('carrier').style.display = "none"
     }
     else if (!checkPrefix(phoneValue)) {
         setError(phone, 'Phone number not valid!!!')
     } else {
         setSuccess(phone);
     }
-
         }
+
+// /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/
+
+
 // ======= DO NOT EDIT ============== //
 export default startApp;
   // ======= EEND DO NOT EDIT ========= //
